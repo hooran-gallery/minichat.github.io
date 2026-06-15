@@ -1,5 +1,5 @@
 const socket = io(
-    "http://localhost:3000"
+    "https://bak-mf27.onrender.com"
 );
 
 function sendMessage(){
