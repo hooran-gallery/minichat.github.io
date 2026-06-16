@@ -48,3 +48,27 @@ async function register() {
         console.log(err);
     }
 }
+
+// ارسال پیام
+function sendMessage() {
+
+    const text =
+        document.getElementById("message").value;
+
+    if (!text) return;
+
+    document.getElementById("messages")
+        .innerHTML +=
+        `
+        <div style="
+            background:#eee;
+            padding:10px;
+            margin:10px;
+            border-radius:10px;
+        ">
+            ${text}
+        </div>
+        `;
+
+    document.getElementById("message").value = "";
+}
