@@ -15,25 +15,36 @@ async function register() {
         return;
     }
 
-    const response = await fetch(
-        "https://bak-mf27.onrender.com/register",
-        {
-            method: "POST",
+    try {
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+        const response = await fetch(
+            "https://bak-mf27.onrender.com/register",
+            {
+                method: "POST",
 
-            body: JSON.stringify({
-                username,
-                password
-            })
-        }
-    );
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-    const data = await response.json();
+                body: JSON.stringify({
+                    username,
+                    password
+                })
+            }
+        );
 
-    document.getElementById("result")
-        .innerHTML =
-        data.message;
+        const data = await response.json();
+
+        document.getElementById("result")
+            .innerHTML =
+            data.message;
+
+    } catch (err) {
+
+        document.getElementById("result")
+            .innerHTML =
+            "خطا در ارتباط با سرور";
+
+        console.log(err);
+    }
 }
