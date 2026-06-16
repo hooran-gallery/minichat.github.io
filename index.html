@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مینی چت</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <h1>مینی چت</h1>
+
+<h2>ثبت نام</h2>
+
+<input id="username" placeholder="نام کاربری">
+
+<input id="password"
+       type="password"
+       placeholder="رمز">
+
+<button onclick="register()">
+ثبت نام
+</button>
+
+<div id="result"></div>
+
+<hr>
 
 <div class="chat">
 
@@ -20,25 +26,12 @@
     <button onclick="sendMessage()">
         ارسال
     </button>
-    <h2>ثبت نام</h2>
-
-<input id="username" placeholder="نام کاربری"> 
-
-<input id="password"
-       type="password"
-       placeholder="رمز">
-
-<button onclick="register()">
-ثبت نام
-</button>
 
 </div>
 
 <hr>
 
 <div id="messages"></div>
+
 <script src="https://bak-mf27.onrender.com/socket.io/socket.io.js"></script>
 <script src="app.js"></script>
-
-</body>
-</html>
