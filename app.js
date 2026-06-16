@@ -8,7 +8,7 @@ async function register(){
 
     const response =
         await fetch(
-            "http://localhost:3000/register",
+            "https://bak-mf27.onrender.com",
             {
                 method:"POST",
 
