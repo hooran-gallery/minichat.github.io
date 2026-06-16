@@ -1,31 +1,32 @@
-const socket = io(
-    "https://bak-mf27.onrender.com"
-);
+async function register(){
 
-function sendMessage(){
+    const username =
+        document.getElementById("username").value;
 
-    const text =
-      document.getElementById("message").value;
+    const password =
+        document.getElementById("password").value;
 
-    socket.emit(
-      "chat-message",
-      text
-    );
+    const response =
+        await fetch(
+            "http://localhost:3000/register",
+            {
+                method:"POST",
 
-    document.getElementById("message").value="";
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify({
+                    username,
+                    password
+                })
+            }
+        );
+
+    const data =
+        await response.json();
+
+    document.getElementById("result")
+        .innerHTML =
+        data.message || "ثبت شد";
 }
-
-socket.on(
-  "chat-message",
-  (msg)=>{
-
-    document.getElementById("messages")
-      .innerHTML +=
-      `
-      <div class="message">
-        ${msg}
-      </div>
-      `;
-
-  }
-);
