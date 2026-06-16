@@ -1,4 +1,4 @@
-async function register(){
+async function register() {
 
     const username =
         document.getElementById("username").value;
@@ -6,27 +6,34 @@ async function register(){
     const password =
         document.getElementById("password").value;
 
-    const response =
-        await fetch(
-            "https://bak-mf27.onrender.com",
-            {
-                method:"POST",
+    if (!username || !password) {
 
-                headers:{
-                    "Content-Type":"application/json"
-                },
+        document.getElementById("result")
+            .innerHTML =
+            "نام کاربری و رمز را وارد کنید";
 
-                body:JSON.stringify({
-                    username,
-                    password
-                })
-            }
-        );
+        return;
+    }
 
-    const data =
-        await response.json();
+    const response = await fetch(
+        "https://bak-mf27.onrender.com/register",
+        {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                username,
+                password
+            })
+        }
+    );
+
+    const data = await response.json();
 
     document.getElementById("result")
         .innerHTML =
-        data.message || "ثبت شد";
+        data.message;
 }
