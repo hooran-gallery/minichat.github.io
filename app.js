@@ -29,3 +29,17 @@ socket.on(
         `;
     }
 );
+async function login() {
+
+    const username =
+        document.getElementById("username").value;
+
+    localStorage.setItem(
+        "username",
+        username
+    );
+
+    document.getElementById("result")
+        .innerHTML =
+        "وارد شدید";
+}
