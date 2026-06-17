@@ -52,10 +52,41 @@ function sendMessage(){
 
     document.getElementById("message").value="";
 }
+function loadProfile(){
 
+    const username =
+        localStorage.getItem("username");
+
+    if(username){
+
+        document.getElementById(
+            "currentUser"
+        ).innerHTML =
+        "👤 " + username;
+
+    }else{
+
+        document.getElementById(
+            "currentUser"
+        ).innerHTML =
+        "مهمان";
+    }
+}
+
+function logout(){
+
+    localStorage.removeItem(
+        "username"
+    );
+
+    alert("از حساب خارج شدید");
+
+    location.reload();
+}
 socket.on(
     "new-message",
     (msg)=>{
         showMessage(msg);
     }
 );
+loadProfile();
