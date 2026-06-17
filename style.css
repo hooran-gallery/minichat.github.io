@@ -1,29 +1,62 @@
 body{
+
     background:#111;
+
     color:#00ff88;
+
     font-family:tahoma;
+
     text-align:center;
+
+    padding:20px;
+}
+
+h1{
+
+    color:#00ff88;
 }
 
 input{
+
     background:#222;
+
     color:#00ff88;
+
     border:1px solid #00ff88;
+
     padding:10px;
+
     margin:5px;
+
+    border-radius:8px;
 }
 
 button{
+
     background:#00ff88;
+
     color:black;
+
     border:none;
+
     padding:10px 20px;
+
+    margin:5px;
+
+    border-radius:8px;
+
     cursor:pointer;
 }
 
 .msg{
+
     background:#222;
-    margin:10px;
+
+    border:1px solid #00ff88;
+
     padding:10px;
+
+    margin:10px;
+
     border-radius:10px;
 }
