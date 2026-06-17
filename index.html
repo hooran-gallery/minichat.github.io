@@ -1,16 +1,39 @@
-<h1>مینی چت</h1>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 
-<h2>ثبت نام</h2>
+<head>
 
-<input id="username" placeholder="نام کاربری">
+<meta charset="UTF-8">
 
-<input id="password"
-       type="password"
-       placeholder="رمز">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Mini Chat</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<h1>Mini Chat</h1>
+
+<input
+id="username"
+placeholder="نام کاربری">
+
+<input
+id="password"
+type="password"
+placeholder="رمز عبور">
+
+<br><br>
 
 <button onclick="register()">
 ثبت نام
 </button>
+
 <button onclick="login()">
 ورود
 </button>
@@ -19,22 +42,23 @@
 
 <hr>
 
-<div class="chat">
+<input
+id="message"
+type="text"
+placeholder="پیام بنویس">
 
-    <input
-        id="message"
-        type="text"
-        placeholder="پیام بنویس">
-
-    <button onclick="sendMessage()">
-        ارسال
-    </button>
-
-</div>
+<button onclick="sendMessage()">
+ارسال
+</button>
 
 <hr>
 
 <div id="messages"></div>
 
 <script src="https://bak-mf27.onrender.com/socket.io/socket.io.js"></script>
+
 <script src="app.js"></script>
+
+</body>
+
+</html>
