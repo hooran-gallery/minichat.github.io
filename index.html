@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Mini Chat</title>
+<title>MiniChat Pro</title>
 
 <link rel="stylesheet"
 href="style.css">
@@ -17,7 +17,11 @@ href="style.css">
 
 <body>
 
-<h1>Mini Chat</h1>
+<div class="container">
+
+<h1>MiniChat Pro</h1>
+
+<div class="login-box">
 
 <input
 id="username"
@@ -28,8 +32,6 @@ id="password"
 type="password"
 placeholder="رمز عبور">
 
-<br><br>
-
 <button onclick="register()">
 ثبت نام
 </button>
@@ -38,28 +40,51 @@ placeholder="رمز عبور">
 ورود
 </button>
 
-<div id="result"></div>
+<button onclick="logout()">
+خروج
+</button>
 
-<hr>
-<div id="profile">
-    <h3 id="currentUser">مهمان</h3>
-
-    <button onclick="logout()">
-        خروج از حساب
-    </button>
 </div>
+
+<div id="profile">
+
+👤 <span id="currentUser">
+مهمان
+</span>
+
+</div>
+
+<div class="online-box">
+
+<h3>
+کاربران آنلاین
+</h3>
+
+<div id="onlineUsers">
+</div>
+
+</div>
+
+<div class="chat-box">
+
+<div id="messages">
+</div>
+
+<div class="send-box">
+
 <input
 id="message"
-type="text"
 placeholder="پیام بنویس">
 
 <button onclick="sendMessage()">
 ارسال
 </button>
 
-<hr>
+</div>
 
-<div id="messages"></div>
+</div>
+
+</div>
 
 <script src="https://bak-mf27.onrender.com/socket.io/socket.io.js"></script>
 
