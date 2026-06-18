@@ -1,73 +1,147 @@
 body{
 
-    background:#111;
+background:#0d0d0d;
 
-    color:#00ff88;
+color:#00ff88;
 
-    font-family:tahoma;
+font-family:tahoma;
 
-    text-align:center;
+margin:0;
 
-    padding:20px;
+padding:0;
+}
+
+.container{
+
+width:90%;
+
+max-width:900px;
+
+margin:auto;
+
+padding:20px;
 }
 
 h1{
 
-    color:#00ff88;
+text-align:center;
+
+color:#00ff88;
+}
+
+.login-box{
+
+text-align:center;
+
+margin-bottom:20px;
 }
 
 input{
 
-    background:#222;
+background:#111;
 
-    color:#00ff88;
+color:#00ff88;
 
-    border:1px solid #00ff88;
+border:1px solid #00ff88;
 
-    padding:10px;
+padding:10px;
 
-    margin:5px;
+margin:5px;
 
-    border-radius:8px;
+border-radius:8px;
 }
 
 button{
 
-    background:#00ff88;
+background:#00ff88;
 
-    color:black;
+color:black;
 
-    border:none;
+border:none;
 
-    padding:10px 20px;
+padding:10px 15px;
 
-    margin:5px;
+margin:5px;
 
-    border-radius:8px;
+border-radius:8px;
 
-    cursor:pointer;
+cursor:pointer;
+
+font-weight:bold;
+}
+
+button:hover{
+
+opacity:.8;
+}
+
+#profile{
+
+background:#151515;
+
+padding:10px;
+
+border:1px solid #00ff88;
+
+border-radius:10px;
+
+margin-bottom:15px;
+}
+
+.online-box{
+
+background:#151515;
+
+padding:10px;
+
+border:1px solid #00ff88;
+
+border-radius:10px;
+
+margin-bottom:15px;
+}
+
+.chat-box{
+
+background:#151515;
+
+border:1px solid #00ff88;
+
+border-radius:10px;
+
+padding:10px;
+}
+
+#messages{
+
+height:400px;
+
+overflow-y:auto;
 }
 
 .msg{
 
-    background:#222;
+background:#202020;
 
-    border:1px solid #00ff88;
+padding:10px;
 
-    padding:10px;
+margin:10px 0;
 
-    margin:10px;
+border-radius:10px;
 
-    border-radius:10px;
-}
-#profile{
-    background:#222;
-    border:1px solid #00ff88;
-    padding:10px;
-    margin-bottom:15px;
-    border-radius:10px;
+border-right:4px solid #00ff88;
 }
 
-#currentUser{
-    color:#00ff88;
+.send-box{
+
+display:flex;
+
+gap:10px;
+
+margin-top:10px;
+}
+
+.send-box input{
+
+flex:1;
 }
